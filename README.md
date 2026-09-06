@@ -2,6 +2,8 @@
 
 Experiments in goal-directed AI engineering under uncertainty.
 
+TARGET(AI) applies TARGET — a goal-directed method built around explicit objectives, reasoning, evidence, feedback, and adaptation — to AI-assisted engineering. Rather than assuming the initial plan is correct, the process uses feedback loops to expose assumptions, test them against evidence, and adjust the next action.
+
 This repository tests TARGET(AI) against real problems.
 
 The objective is not to prove that the method works.
@@ -20,3 +22,10 @@ Each experiment preserves its plans, observed evidence, limitations, and retrosp
 ## Method
 
 See the practical [quick reference](methodology/quick-reference.md).
+
+## Further reading
+
+TARGET(AI) is part of the TARGET series by Matheus G. Reis.
+
+- **[TARGET: A General Method for Goal-Directed Action, Learning, and Adaptation](https://www.amazon.com/dp/B0HGGT666T)** — the core methodology
+- **[TARGET(AI): A Method for Goal-Directed Action, Tested Against AI and Autonomy](https://www.amazon.com/dp/B0HH8J89J8)** — applying the methodology to AI-assisted and agentic systems
