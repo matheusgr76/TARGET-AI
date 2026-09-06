@@ -1,29 +1,31 @@
 # Retrospective
 
-## Outcome
+_Source: `target_ai_retrospective.md` from the OpenCode investigation workspace, curated to distinguish experiment-time evidence from later contribution activity._
 
-The local correction introduced a `resolvePrompt` helper for Markdown agents and modes:
+## Experiment-time result
 
-1. use the trimmed Markdown body when non-empty;
-2. otherwise use frontmatter `prompt:`;
-3. apply the existing `{env:...}` / `{file:...}` resolver to the selected text.
+The correction selected the trimmed Markdown body when non-empty, otherwise frontmatter `prompt:`, then applied the existing `{env:...}` / `{file:...}` resolver. The same behavior was applied to Markdown modes because the loader and schema were duplicated.
 
-Five focused effective-configuration tests failed before the correction as predicted and passed after it. The complete sandbox configuration suite passed 113 tests.
+Five focused resolved-configuration tests covered frontmatter fallback, body precedence, environment substitution, configuration-directory-relative file substitution, and mode fallback.
 
-## What TARGET(AI) changed
+| Check | Experiment-time result |
+|---|---|
+| New tests before correction | 4 expected failures; body-precedence control passed |
+| New tests after correction | 5 passed, 0 failed |
+| Full sandbox configuration suite | 113 passed, 0 failed |
+| Sandbox typecheck | Did not complete: unmodified `src/bus/global.ts` error under temporary compatibility dependencies |
+| Exact authoritative dependency graph | Not locally installable because the public registry lacked the locked provider version |
 
-The baseline plan was faster and adequate as an implementation outline. TARGET(AI) was more reliable for this issue because it required semantic decisions and observable proof before implementation.
+## Methodological value
 
-| Criterion | Baseline | TARGET(AI) result |
-| --- | --- | --- |
-| Prompt precedence | Selected a likely contract | Required evidence and preserved body compatibility |
-| Relative file semantics | Initially incorrect | Second reasoning pass corrected the base to the configuration directory |
-| Scope | Narrow by intent | Rejected broad config refactor and duplicate resolver from stated constraints |
-| Verification | Focused tests planned | Predeclared outcomes separated source explanation from executable evidence |
-| Publication | Not part of local plan | Tracked separately from technical results |
+The evidence gate prevented overclaiming. The second reasoning pass caught the material file-resolution error before it reached the contribution. Constraints excluded runtime warnings, command-loader changes, dependency changes, and a configuration-system redesign.
 
-## Costs and limits
+## Cost
 
-For a two-file correction, full PRD/TDD-length artifacts were disproportionate. The retained value was the target/evidence gate, short assessment, genuine second reasoning pass, focused regressions, and explicit tracking of environment limits.
+The process produced more planning material than the two-file correction required. PRD/TDD-length artifacts were excessive here; the useful minimum was a target/evidence gate, short assessment, genuine second reasoning pass, focused regressions, and explicit tracking of verification limits.
 
-The experiment demonstrates a local, sandbox-validated correction. It does not establish exact-upstream CI success or merged status. PR [#47635](https://github.com/anomalyco/opencode/pull/47635) remains open while the fork's exact-lockfile CI is queued.
+## Historical status versus current status
+
+The source retrospective says publication was deferred because that was true when it was written. It is historical evidence, not current status.
+
+Current locally verified state is `markdown-agent-prompts` at `cd8a3f6`; verified GitHub state is [PR #47635](https://github.com/anomalyco/opencode/pull/47635) open and not merged. Exact-lockfile CI is still incomplete in this record. No statement here claims maintainer acceptance, merge, or general validation of TARGET(AI).

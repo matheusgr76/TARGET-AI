@@ -1,22 +1,20 @@
 # TARGET(AI) quick reference
 
-TARGET(AI) is a goal-directed engineering cycle for problems with meaningful uncertainty.
+TARGET(AI) is a goal-directed loop for engineering work where requirements, semantics, or verification are uncertain.
 
-1. **Target** — State the observable outcome, evidence gate, constraints, and stopping horizon.
-2. **Assess** — Record the current state, evidence, unknowns, and environmental limitations.
-3. **Reason** — Form a hypothesis, then deliberately test the assumptions most likely to change the design.
-4. **Generate** — Consider only options that satisfy the target constraints; reject scope expansion without evidence.
-5. **Execute** — Make the smallest correction that implements the selected option.
-6. **Track** — Compare observed outcomes with the evidence gate. Classify misses as operational, reasoning, or strategic before choosing the next loop.
+1. **Target** — Define the observable outcome, evidence standard, constraints, and stopping horizon.
+2. **Assess** — Record current facts, unknowns, and environmental limits.
+3. **Reason** — State a hypothesis; inspect the assumptions most likely to change the design.
+4. **Generate** — Compare only options that satisfy the constraints; reject scope growth without evidence.
+5. **Execute** — Implement the smallest selected correction.
+6. **Track** — Compare results with the evidence standard and decide the next loop.
 
-## Evidence discipline
+## Evidence rules
 
-- A source trace explains a defect; it does not prove a correction works.
-- Predeclare behavior-level evidence before editing.
-- Preserve contradictory evidence and rejected alternatives.
-- Separate local, compatibility, and exact-environment verification.
-- Do not convert an unverified result into a completion claim.
+- Source tracing can explain a defect but cannot prove a correction.
+- Define behavior-level evidence before editing.
+- Separate compatibility-environment results from exact-environment verification.
+- Preserve contradictory evidence, revised decisions, and unresolved limits.
+- Classify a miss before reacting: operational setup, reasoning, or strategy.
 
-## Scaling
-
-Use the full cycle when behavior, scope, or environment is uncertain. For mechanical changes, retain the target and evidence gate but avoid ceremony that cannot change a decision.
+Scale the process to risk. For mechanical work, keep a clear target and evidence gate; do not add ceremony that cannot alter a decision.

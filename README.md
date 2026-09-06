@@ -9,14 +9,14 @@ The objective is to discover when it works, when it does not, and why.
 
 ## Scope
 
-Each experiment records a bounded engineering problem, competing plans, observable evidence, and a retrospective. It is not a book mirror, framework pitch, or benchmark leaderboard.
+Each experiment preserves its plans, observed evidence, limitations, and retrospective. This is an evidence repository, not a book mirror, product pitch, or endorsement claim.
 
 ## Experiments
 
-| ID | Problem | Status | Evidence |
-| --- | --- | --- | --- |
-| 001 | OpenCode Markdown-agent prompt configuration | Upstream PR open; CI queued | Focused sandbox regressions passed; exact-lockfile CI has not completed |
+| # | Problem | Project | Status | Main finding |
+|---|---|---|---|---|
+| 001 | Markdown agent configuration | OpenCode | [PR #47635](https://github.com/anomalyco/opencode/pull/47635) open; exact-lockfile CI incomplete | Second reasoning pass corrected a path-resolution assumption |
 
 ## Method
 
-See the [quick reference](methodology/quick-reference.md).
+See the practical [quick reference](methodology/quick-reference.md).
