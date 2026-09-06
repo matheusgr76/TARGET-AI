@@ -21,7 +21,7 @@ Each experiment preserves its plans, observed evidence, limitations, and retrosp
 
 ## Method
 
-See the practical [quick reference](methodology/quick-reference.md).
+See the [methodology overview](methodology/overview.md).
 
 ## Further reading
 
