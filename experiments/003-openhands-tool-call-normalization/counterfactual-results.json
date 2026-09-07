@@ -1,0 +1,576 @@
+{
+  "fixtures": {
+    "canonical": "<function=terminal>\n<parameter=command>ls</parameter>\n</function>",
+    "canonical_plus_raw": "<function=terminal>\n<parameter=command>ls</parameter>\n</function>\n<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>",
+    "exact_raw": "<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>",
+    "invalid_parameter": "<tool_call>terminal\n<parameter=not_command>ls</parameter>\n</tool_call>",
+    "leading_prose": "I will inspect the directory.\n<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>",
+    "literal_closer": "<tool_call>terminal\n<parameter=command>printf '</tool_call>'</parameter>\n</tool_call>",
+    "markdown_fenced": "Documentation example:\n```xml\n<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>\n```",
+    "missing_outer_close": "<tool_call>terminal\n<parameter=command>ls</parameter>",
+    "plain_prose": "The literal <tool_call>NAME syntax is documented here.",
+    "quoted_documentation": "> Example action:\n> <tool_call>terminal\n> <parameter=command>ls</parameter>\n> </tool_call>",
+    "trailing_prose": "<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>\nThis is the command I chose.",
+    "truncated_parameter": "<tool_call>terminal\n<parameter=command>ls",
+    "two_raw_wrappers": "<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>\n<tool_call>terminal\n<parameter=command>pwd</parameter>\n</tool_call>",
+    "unknown_tool": "<tool_call>unknown_tool\n<parameter=command>ls</parameter>\n</tool_call>",
+    "zero_parameter": "<tool_call>finish\n</tool_call>"
+  },
+  "results": {
+    "canonical": {
+      "baseline_A": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "ls"
+        },
+        "classification": "tool_calls",
+        "content": "",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      },
+      "current_main": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "ls"
+        },
+        "classification": "tool_calls",
+        "content": "",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      },
+      "target_B": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "ls"
+        },
+        "classification": "tool_calls",
+        "content": "",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      }
+    },
+    "canonical_plus_raw": {
+      "baseline_A": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "ls"
+        },
+        "classification": "tool_calls",
+        "content": "",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      },
+      "current_main": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "ls"
+        },
+        "classification": "tool_calls",
+        "content": "",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      },
+      "target_B": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "ls"
+        },
+        "classification": "tool_calls",
+        "content": "",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      }
+    },
+    "exact_raw": {
+      "baseline_A": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "ls"
+        },
+        "classification": "tool_calls",
+        "content": "",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": true,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      },
+      "current_main": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "target_B": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "ls"
+        },
+        "classification": "tool_calls",
+        "content": "",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": true,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      }
+    },
+    "invalid_parameter": {
+      "baseline_A": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": null,
+        "content": null,
+        "dispatch_eligible": false,
+        "error": "FunctionCallValidationError: Parameter 'not_command' is not allowed for function 'terminal'. Allowed parameters: {'command'}",
+        "normalization_occurred": true,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "current_main": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>terminal\n<parameter=not_command>ls</parameter>\n</tool_call>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "target_B": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": null,
+        "content": null,
+        "dispatch_eligible": false,
+        "error": "FunctionCallValidationError: Parameter 'not_command' is not allowed for function 'terminal'. Allowed parameters: {'command'}",
+        "normalization_occurred": true,
+        "tool_call_count": 0,
+        "tool_name": null
+      }
+    },
+    "leading_prose": {
+      "baseline_A": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "ls"
+        },
+        "classification": "tool_calls",
+        "content": "I will inspect the directory.",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": true,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      },
+      "current_main": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "I will inspect the directory.\n<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "target_B": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "I will inspect the directory.\n<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      }
+    },
+    "literal_closer": {
+      "baseline_A": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "printf '</tool_call>'"
+        },
+        "classification": "tool_calls",
+        "content": "",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": true,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      },
+      "current_main": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>terminal\n<parameter=command>printf '</tool_call>'</parameter>\n</tool_call>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "target_B": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "printf '</tool_call>'"
+        },
+        "classification": "tool_calls",
+        "content": "",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": true,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      }
+    },
+    "markdown_fenced": {
+      "baseline_A": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "ls"
+        },
+        "classification": "tool_calls",
+        "content": "Documentation example:\n```xml",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": true,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      },
+      "current_main": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "Documentation example:\n```xml\n<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>\n```",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "target_B": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "Documentation example:\n```xml\n<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>\n```",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      }
+    },
+    "missing_outer_close": {
+      "baseline_A": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "ls"
+        },
+        "classification": "tool_calls",
+        "content": "",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": true,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      },
+      "current_main": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>terminal\n<parameter=command>ls</parameter>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "target_B": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>terminal\n<parameter=command>ls</parameter>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      }
+    },
+    "plain_prose": {
+      "baseline_A": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "The literal <tool_call>NAME syntax is documented here.",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "current_main": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "The literal <tool_call>NAME syntax is documented here.",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "target_B": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "The literal <tool_call>NAME syntax is documented here.",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      }
+    },
+    "quoted_documentation": {
+      "baseline_A": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "> Example action:\n> <tool_call>terminal\n> <parameter=command>ls</parameter>\n> </tool_call>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "current_main": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "> Example action:\n> <tool_call>terminal\n> <parameter=command>ls</parameter>\n> </tool_call>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "target_B": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "> Example action:\n> <tool_call>terminal\n> <parameter=command>ls</parameter>\n> </tool_call>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      }
+    },
+    "trailing_prose": {
+      "baseline_A": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "ls"
+        },
+        "classification": "tool_calls",
+        "content": "",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": true,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      },
+      "current_main": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>\nThis is the command I chose.",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "target_B": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>\nThis is the command I chose.",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      }
+    },
+    "truncated_parameter": {
+      "baseline_A": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": null,
+        "content": null,
+        "dispatch_eligible": false,
+        "error": "FunctionCallValidationError: Missing required parameters for function 'terminal': {'command'}",
+        "normalization_occurred": true,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "current_main": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>terminal\n<parameter=command>ls",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "target_B": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>terminal\n<parameter=command>ls",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      }
+    },
+    "two_raw_wrappers": {
+      "baseline_A": {
+        "action_event_count": 1,
+        "arguments": {
+          "command": "pwd"
+        },
+        "classification": "tool_calls",
+        "content": "",
+        "dispatch_eligible": true,
+        "error": null,
+        "normalization_occurred": true,
+        "tool_call_count": 1,
+        "tool_name": "terminal"
+      },
+      "current_main": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>\n<tool_call>terminal\n<parameter=command>pwd</parameter>\n</tool_call>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "target_B": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>terminal\n<parameter=command>ls</parameter>\n</tool_call>\n<tool_call>terminal\n<parameter=command>pwd</parameter>\n</tool_call>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      }
+    },
+    "unknown_tool": {
+      "baseline_A": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": null,
+        "content": null,
+        "dispatch_eligible": false,
+        "error": "FunctionCallValidationError: Function 'unknown_tool' not found in available tools: ['terminal', 'finish']",
+        "normalization_occurred": true,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "current_main": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>unknown_tool\n<parameter=command>ls</parameter>\n</tool_call>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "target_B": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": null,
+        "content": null,
+        "dispatch_eligible": false,
+        "error": "FunctionCallValidationError: Function 'unknown_tool' not found in available tools: ['terminal', 'finish']",
+        "normalization_occurred": true,
+        "tool_call_count": 0,
+        "tool_name": null
+      }
+    },
+    "zero_parameter": {
+      "baseline_A": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>finish\n</tool_call>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "current_main": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>finish\n</tool_call>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      },
+      "target_B": {
+        "action_event_count": 0,
+        "arguments": null,
+        "classification": "content",
+        "content": "<tool_call>finish\n</tool_call>",
+        "dispatch_eligible": false,
+        "error": null,
+        "normalization_occurred": false,
+        "tool_call_count": 0,
+        "tool_name": null
+      }
+    }
+  }
+}
