@@ -18,6 +18,7 @@ Each experiment preserves its plans, observed evidence, limitations, and retrosp
 | # | Problem | Project | Status | Main finding |
 |---|---|---|---|---|
 | 001 | Markdown agent configuration | OpenCode | [PR #47635](https://github.com/anomalyco/opencode/pull/47635) open; exact-lockfile CI incomplete | Second reasoning pass corrected a path-resolution assumption |
+| 002 | Repeated compilation with default handlers | LangGraph | Complete locally; no upstream acceptance evidence | Baseline chose the repair; TARGET(AI) added a state-invariant test that rejected a shallow-map repair |
 
 ## Method
 
