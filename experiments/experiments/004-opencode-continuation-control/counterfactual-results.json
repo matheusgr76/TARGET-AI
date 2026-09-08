@@ -1,0 +1,1430 @@
+{
+  "metadata": {
+    "threshold": 10,
+    "harness": "disposable counterfactual model of SessionPrompt assistant-message turns, completed tool parts, SessionStatus, events, and tool suppression; it is not an upstream integration test"
+  },
+  "baseline": {
+    "normal": {
+      "session": "idle",
+      "lastSignature": "glob:{\"pattern\":\"**/*.txt\"}",
+      "count": 1,
+      "reassessmentIssued": false,
+      "providerTurns": 2,
+      "assistantMessages": 2,
+      "toolExecutions": 1,
+      "toolParts": [
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        }
+      ],
+      "events": [],
+      "text": [
+        "done"
+      ],
+      "terminal": "normal"
+    },
+    "alternating": {
+      "session": "idle",
+      "lastSignature": "glob:{\"pattern\":\"y\"}",
+      "count": 1,
+      "reassessmentIssued": false,
+      "providerTurns": 5,
+      "assistantMessages": 5,
+      "toolExecutions": 4,
+      "toolParts": [
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "x"
+          },
+          "output": "x",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "y"
+          },
+          "output": "y",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "x"
+          },
+          "output": "x",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "y"
+          },
+          "output": "y",
+          "status": "completed"
+        }
+      ],
+      "events": [],
+      "text": [
+        "done"
+      ],
+      "terminal": "normal"
+    },
+    "changing": {
+      "session": "idle",
+      "lastSignature": "glob:{\"pattern\":\"p11\"}",
+      "count": 1,
+      "reassessmentIssued": false,
+      "providerTurns": 13,
+      "assistantMessages": 13,
+      "toolExecutions": 12,
+      "toolParts": [
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p0"
+          },
+          "output": "p0",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p1"
+          },
+          "output": "p1",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p2"
+          },
+          "output": "p2",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p3"
+          },
+          "output": "p3",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p4"
+          },
+          "output": "p4",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p5"
+          },
+          "output": "p5",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p6"
+          },
+          "output": "p6",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p7"
+          },
+          "output": "p7",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p8"
+          },
+          "output": "p8",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p9"
+          },
+          "output": "p9",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p10"
+          },
+          "output": "p10",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p11"
+          },
+          "output": "p11",
+          "status": "completed"
+        }
+      ],
+      "events": [],
+      "text": [
+        "done"
+      ],
+      "terminal": "normal"
+    },
+    "nine": {
+      "session": "idle",
+      "lastSignature": "glob:{\"pattern\":\"**/*.txt\"}",
+      "count": 9,
+      "reassessmentIssued": false,
+      "providerTurns": 10,
+      "assistantMessages": 10,
+      "toolExecutions": 9,
+      "toolParts": [
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        }
+      ],
+      "events": [],
+      "text": [
+        "done"
+      ],
+      "terminal": "normal"
+    },
+    "baselineTenEleven": {
+      "session": "idle",
+      "lastSignature": "glob:{\"pattern\":\"**/*.txt\"}",
+      "count": 10,
+      "reassessmentIssued": false,
+      "providerTurns": 10,
+      "assistantMessages": 10,
+      "toolExecutions": 10,
+      "toolParts": [
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        }
+      ],
+      "events": [
+        {
+          "type": "continuation-threshold",
+          "ref": "repeated-identical-tool-call",
+          "count": 10,
+          "tool": "glob"
+        },
+        {
+          "type": "error",
+          "ref": "repeated-identical-tool-call"
+        }
+      ],
+      "text": [],
+      "terminal": "error"
+    },
+    "polling": {
+      "session": "idle",
+      "lastSignature": "check_deployment:{}",
+      "count": 10,
+      "reassessmentIssued": false,
+      "providerTurns": 10,
+      "assistantMessages": 10,
+      "toolExecutions": 10,
+      "toolParts": [
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 1",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 2",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 3",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 4",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 5",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 6",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 7",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 8",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 9",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 10",
+          "status": "completed"
+        }
+      ],
+      "events": [
+        {
+          "type": "continuation-threshold",
+          "ref": "repeated-identical-tool-call",
+          "count": 10,
+          "tool": "check_deployment"
+        },
+        {
+          "type": "error",
+          "ref": "repeated-identical-tool-call"
+        }
+      ],
+      "text": [],
+      "terminal": "error"
+    },
+    "changingOutput": {
+      "session": "idle",
+      "lastSignature": "status:{}",
+      "count": 10,
+      "reassessmentIssued": false,
+      "providerTurns": 10,
+      "assistantMessages": 10,
+      "toolExecutions": 10,
+      "toolParts": [
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 10%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 20%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 30%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 40%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 50%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 60%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 70%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 80%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 90%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 100%",
+          "status": "completed"
+        }
+      ],
+      "events": [
+        {
+          "type": "continuation-threshold",
+          "ref": "repeated-identical-tool-call",
+          "count": 10,
+          "tool": "status"
+        },
+        {
+          "type": "error",
+          "ref": "repeated-identical-tool-call"
+        }
+      ],
+      "text": [],
+      "terminal": "error"
+    },
+    "cancellation": {
+      "session": "idle",
+      "lastSignature": "glob:{\"pattern\":\"**/*.txt\"}",
+      "count": 3,
+      "reassessmentIssued": false,
+      "providerTurns": 3,
+      "assistantMessages": 3,
+      "toolExecutions": 3,
+      "toolParts": [
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        }
+      ],
+      "events": [
+        {
+          "type": "cancel"
+        }
+      ],
+      "text": [],
+      "terminal": "cancelled"
+    }
+  },
+  "target": {
+    "normal": {
+      "session": "idle",
+      "lastSignature": "glob:{\"pattern\":\"**/*.txt\"}",
+      "count": 1,
+      "reassessmentIssued": false,
+      "providerTurns": 2,
+      "assistantMessages": 2,
+      "toolExecutions": 1,
+      "toolParts": [
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        }
+      ],
+      "events": [],
+      "text": [
+        "done"
+      ],
+      "terminal": "normal"
+    },
+    "alternating": {
+      "session": "idle",
+      "lastSignature": "glob:{\"pattern\":\"y\"}",
+      "count": 1,
+      "reassessmentIssued": false,
+      "providerTurns": 5,
+      "assistantMessages": 5,
+      "toolExecutions": 4,
+      "toolParts": [
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "x"
+          },
+          "output": "x",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "y"
+          },
+          "output": "y",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "x"
+          },
+          "output": "x",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "y"
+          },
+          "output": "y",
+          "status": "completed"
+        }
+      ],
+      "events": [],
+      "text": [
+        "done"
+      ],
+      "terminal": "normal"
+    },
+    "changing": {
+      "session": "idle",
+      "lastSignature": "glob:{\"pattern\":\"p11\"}",
+      "count": 1,
+      "reassessmentIssued": false,
+      "providerTurns": 13,
+      "assistantMessages": 13,
+      "toolExecutions": 12,
+      "toolParts": [
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p0"
+          },
+          "output": "p0",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p1"
+          },
+          "output": "p1",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p2"
+          },
+          "output": "p2",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p3"
+          },
+          "output": "p3",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p4"
+          },
+          "output": "p4",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p5"
+          },
+          "output": "p5",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p6"
+          },
+          "output": "p6",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p7"
+          },
+          "output": "p7",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p8"
+          },
+          "output": "p8",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p9"
+          },
+          "output": "p9",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p10"
+          },
+          "output": "p10",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "p11"
+          },
+          "output": "p11",
+          "status": "completed"
+        }
+      ],
+      "events": [],
+      "text": [
+        "done"
+      ],
+      "terminal": "normal"
+    },
+    "nine": {
+      "session": "idle",
+      "lastSignature": "glob:{\"pattern\":\"**/*.txt\"}",
+      "count": 9,
+      "reassessmentIssued": false,
+      "providerTurns": 10,
+      "assistantMessages": 10,
+      "toolExecutions": 9,
+      "toolParts": [
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        }
+      ],
+      "events": [],
+      "text": [
+        "done"
+      ],
+      "terminal": "normal"
+    },
+    "targetUseful": {
+      "session": "idle",
+      "lastSignature": "glob:{\"pattern\":\"**/*.txt\"}",
+      "count": 10,
+      "reassessmentIssued": true,
+      "providerTurns": 11,
+      "assistantMessages": 11,
+      "toolExecutions": 10,
+      "toolParts": [
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        }
+      ],
+      "events": [
+        {
+          "type": "continuation-threshold",
+          "ref": "repeated-identical-tool-call",
+          "count": 10,
+          "tool": "glob"
+        },
+        {
+          "type": "reassessment-requested",
+          "tools": []
+        },
+        {
+          "type": "reassessment-completed",
+          "category": "useful"
+        }
+      ],
+      "text": [
+        "Automatic checks were bounded after 10 identical results. Deployment remains pending; please provide a deployment event or confirm whether to continue polling."
+      ],
+      "terminal": "normal"
+    },
+    "targetUnhelpful": {
+      "session": "idle",
+      "lastSignature": "glob:{\"pattern\":\"**/*.txt\"}",
+      "count": 10,
+      "reassessmentIssued": true,
+      "providerTurns": 11,
+      "assistantMessages": 11,
+      "toolExecutions": 10,
+      "toolParts": [
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        }
+      ],
+      "events": [
+        {
+          "type": "continuation-threshold",
+          "ref": "repeated-identical-tool-call",
+          "count": 10,
+          "tool": "glob"
+        },
+        {
+          "type": "reassessment-requested",
+          "tools": []
+        },
+        {
+          "type": "reassessment-completed",
+          "category": "unhelpful"
+        }
+      ],
+      "text": [
+        "I appear to be stuck."
+      ],
+      "terminal": "error"
+    },
+    "targetAdversarial": {
+      "session": "idle",
+      "lastSignature": "glob:{\"pattern\":\"**/*.txt\"}",
+      "count": 10,
+      "reassessmentIssued": true,
+      "providerTurns": 11,
+      "assistantMessages": 11,
+      "toolExecutions": 10,
+      "toolParts": [
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        }
+      ],
+      "events": [
+        {
+          "type": "continuation-threshold",
+          "ref": "repeated-identical-tool-call",
+          "count": 10,
+          "tool": "glob"
+        },
+        {
+          "type": "reassessment-requested",
+          "tools": []
+        },
+        {
+          "type": "reassessment-tool-suppressed",
+          "tool": "glob"
+        },
+        {
+          "type": "error",
+          "ref": "reassessment-tool-request"
+        }
+      ],
+      "text": [],
+      "terminal": "error"
+    },
+    "polling": {
+      "session": "idle",
+      "lastSignature": "check_deployment:{}",
+      "count": 10,
+      "reassessmentIssued": true,
+      "providerTurns": 11,
+      "assistantMessages": 11,
+      "toolExecutions": 10,
+      "toolParts": [
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 1",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 2",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 3",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 4",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 5",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 6",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 7",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 8",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 9",
+          "status": "completed"
+        },
+        {
+          "tool": "check_deployment",
+          "input": {},
+          "output": "pending 10",
+          "status": "completed"
+        }
+      ],
+      "events": [
+        {
+          "type": "continuation-threshold",
+          "ref": "repeated-identical-tool-call",
+          "count": 10,
+          "tool": "check_deployment"
+        },
+        {
+          "type": "reassessment-requested",
+          "tools": []
+        },
+        {
+          "type": "reassessment-completed",
+          "category": "useful"
+        }
+      ],
+      "text": [
+        "Deployment is still pending after bounded automatic polling. Please confirm whether to wait or inspect deployment logs."
+      ],
+      "terminal": "normal"
+    },
+    "changingOutput": {
+      "session": "idle",
+      "lastSignature": "status:{}",
+      "count": 10,
+      "reassessmentIssued": true,
+      "providerTurns": 11,
+      "assistantMessages": 11,
+      "toolExecutions": 10,
+      "toolParts": [
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 10%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 20%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 30%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 40%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 50%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 60%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 70%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 80%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 90%",
+          "status": "completed"
+        },
+        {
+          "tool": "status",
+          "input": {},
+          "output": "pending 100%",
+          "status": "completed"
+        }
+      ],
+      "events": [
+        {
+          "type": "continuation-threshold",
+          "ref": "repeated-identical-tool-call",
+          "count": 10,
+          "tool": "status"
+        },
+        {
+          "type": "reassessment-requested",
+          "tools": []
+        },
+        {
+          "type": "reassessment-completed",
+          "category": "useful"
+        }
+      ],
+      "text": [
+        "Status changed but automatic identical calls reached the fixed boundary; please continue manually."
+      ],
+      "terminal": "normal"
+    },
+    "cancellation": {
+      "session": "idle",
+      "lastSignature": "glob:{\"pattern\":\"**/*.txt\"}",
+      "count": 3,
+      "reassessmentIssued": false,
+      "providerTurns": 3,
+      "assistantMessages": 3,
+      "toolExecutions": 3,
+      "toolParts": [
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        },
+        {
+          "tool": "glob",
+          "input": {
+            "pattern": "**/*.txt"
+          },
+          "output": "same",
+          "status": "completed"
+        }
+      ],
+      "events": [
+        {
+          "type": "cancel"
+        }
+      ],
+      "text": [],
+      "terminal": "cancelled"
+    }
+  }
+}
